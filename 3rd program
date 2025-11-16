@@ -23,5 +23,5 @@ x_train_fs=fs.transform(x_train)
 x_test_fs=fs.transform(x_test)
 for i in range(len(fs.scores_)):
     print('feature %d:%f'%(i,fs.scores_[i]))
-    pyplot.bar([i for i in range(len(fs.scores_))],fs.scores_)
-    pyplot.show()
+pyplot.bar([i for i in range(len(fs.scores_))],fs.scores_)
+pyplot.show()
