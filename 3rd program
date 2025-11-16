@@ -20,7 +20,7 @@ x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.33,random_state=1
 fs = SelectKBest(score_func=f_classif,k='all')
 fs.fit(x_train,y_train)
 x_train_fs=fs.transform(x_train)
-x_train_fs=fs.transform(x_test)
+x_test_fs=fs.transform(x_test)
 for i in range(len(fs.scores_)):
     print('feature %d:%f'%(i,fs.scores_[i]))
     pyplot.bar([i for i in range(len(fs.scores_))],fs.scores_)
